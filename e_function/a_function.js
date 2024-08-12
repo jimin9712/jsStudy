@@ -23,12 +23,11 @@
 
 // 아이디, 비밀번호, 닉네임을 전달받는다.
 // 이 때 닉네임의 기본값은 '없음'으로 설정한다.
-function login(id, password, nickname = '없음'){
+function login(id, password, nickname = "없음") {
     console.log("아이디:", id);
     console.log("비밀번호:", password);
     console.log("닉네임:", nickname);
 }
 
-login("user123", "password123");
-login("user123", "password123", "이지민");
-
+login("user1", "1234");
+login("user2", "1234", "이지민");
