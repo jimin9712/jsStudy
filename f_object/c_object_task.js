@@ -18,29 +18,21 @@
 
 // 3명을 모두 마트에 등록 시킨다.
 // 마트 객체를 만들고 각 고객을 프로퍼티로 선언한다.
+// const market = new Object();
+// const user1 = { name: "홍길동", age: 30, point: 3500 };
+// const user2 = { name: "이순신", age: 22, point: 0 };
+// const user3 = { name: "장보고", age: 66, point: 9500 };
 
-const mart = new Object();
+// market.user1 = user1;
+// market.user2 = user2;
+// market.user3 = user3;
 
-mart.customer1 = {
-    name: "홍길동",
-    age: 30,
-    points: 3500,
-};
+// for (let i = 0; i < 3; i++) {
+//     console.log(market[`user${i + 1}`]);
+// }
 
-mart.customer2 = {
-    name: "이순신",
-    age: 22,
-    points: 0,
-};
+// const data = JSON.stringify(market);
+// console.log(data);
 
-mart.customer3 = {
-    name: "장보고",
-    age: 66,
-    points: 9500,
-};
-
-// console.log(mart);
-
-for (let i = 0; i < 3; i++) {
-    console.log(mart[`customer${i + 1}`]);
-}
+// const marketData = JSON.parse(data);
+// console.log(marketData);
