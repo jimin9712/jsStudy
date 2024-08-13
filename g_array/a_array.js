@@ -48,7 +48,7 @@
 // console.log(datas);
 
 // fill(value): Array 객체의 모든 칸에 value로 초기화
-let datas = new Array(5).fill(0);
+// let datas = new Array(5).fill(0);
 
 // forEach((value, index, array) => {})
 // datas.forEach((data, i, datas) => {
@@ -85,14 +85,14 @@ let datas = new Array(5).fill(0);
 // }
 // console.log(multiplesOfTwo);
 
-// 2 ~ 10까지 2의 배수로 Array객체에 담기
+// 2 ~ 10까지 2의 배수로 Array객체에 담기2
 // 2 4 6 8 10: 5칸
-// const datas = new Array(5).fill(5);
-// datas.forEach((값, 인덱스, 객체) => {
-//     객체[인덱스] = (인덱스 + 1) * 2;
-// });
+const datas = new Array(5).fill(5);
+datas.forEach((값, 인덱스, 객체) => {
+    객체[인덱스] = (인덱스 + 1) * 2;
+});
 
-// console.log(datas);
+console.log(datas);
 
 // 1~10까지 담은 후 각 값에 제곱을 출력한다.
 const square = [];
