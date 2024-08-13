@@ -45,24 +45,31 @@
 // 재고-1이 실재고이고, 재고-2는 기타재고이다.
 // 상품 정보에 재고-1을 사용해서 총 가격을 리턴하는 메소드를 선언 한다.
 
-let product = {
-    productNumber: "1",
-    productName: "아이폰",
-    productPrice: 70000,
-    stock1: 10,
-    stock2: 5,
+// const product = {
+//     id: 1,
+//     name: "보리차",
+//     price: 1300,
+//     "stock-1": 32,
+//     "stock-2": -2,
+//     getTotal: () => {
+//         return product.price * product["stock-1"];
+//     },
+// };
 
-    totalPrice: function () {
-        return this.productPrice * this.stock1;
-    },
-};
+// with (product) {
+//     console.log(id, name, price);
+//     for (let i = 0; i < 2; i++) {
+//         console.log(product[`stock-${i + 1}`]);
+//     }
+// }
 
-console.log(`상품 번호: ${product.productNumber}`);
-console.log(`상품명: ${product.productName}`);
-console.log(`가격: ${product.productPrice}원`);
+// 비어있는 객체 선언
+const shop = {};
 
-for (let i = 1; i <= 2; i++) {
-    console.log(`재고-${i}: ${product[`stock${i}`]}개`);
-}
+// key가 존재하지 않다면 추가
+shop.id = "4325";
+console.log(shop);
 
-console.log(`총 가격: ${product.totalPrice()}원`);
+// key가 존재하면 수정
+shop.id = "1";
+console.log(shop);
