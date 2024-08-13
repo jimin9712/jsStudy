@@ -153,20 +153,20 @@
 // // 자동차 번호판 정보, 과속 단속구간 진입 시 속도(km/h)와 이탈 시 속도에 대한 정보를 받는다.
 // // 자동차의 평균속도가 과속 단속 기준 속도에서 10(km/h) 초과했다면 번호판 정보와 "벌금 부과" 문구를 출력하고,
 // // 초과하지 않았다면 "정상 주행" 문구를 출력한다. 단속 기준 속도는 100(km/h)이다.
-// function checkSpeed(licensePlate, entrySpeed, exitSpeed) {
-//     var averageSpeed = (entrySpeed + exitSpeed) / 2;
-//     var speedLimit = 100;
+function checkSpeed(licensePlate, entrySpeed, exitSpeed) {
+    var averageSpeed = (entrySpeed + exitSpeed) / 2;
+    var speedLimit = 100;
 
-//     if (averageSpeed > speedLimit + 10) {
-//         console.log(licensePlate + ": 벌금 부과");
-//     } else {
-//         console.log(licensePlate + ": 정상 주행");
-//     }
-// }
+    if (averageSpeed > speedLimit + 10) {
+        console.log(licensePlate + ": 벌금 부과");
+    } else {
+        console.log(licensePlate + ": 정상 주행");
+    }
+}
 
-// checkSpeed("123가 4567", 110, 120);
+checkSpeed("123가 4567", 110, 120);
 
-// checkSpeed("234나 5678", 95, 100);
+checkSpeed("234나 5678", 95, 100);
 
 // // 3.
 // // 학생의 이름과 국어, 영어, 수학 점수를 입력받는다.
