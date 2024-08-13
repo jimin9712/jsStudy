@@ -226,3 +226,20 @@ function checkEvenOrOdd(number) {
 
 checkEvenOrOdd(4);
 checkEvenOrOdd(7);
+
+// 농장에서 축사 대청소를 하려고 한다.
+// 소와 돼지의 총함 수와 각각 비교해 가축 중 수가 적은 쪽을 출력
+
+const conpareCowWithPig = (cowCount, pigCount, callback) => {
+    let result = cowCount > pigCount;
+    if (callback) {
+        callback(result);
+    }
+    return result;
+};
+
+const printLessThan = (result) => {
+    console.log(!result ? "소" : "돼지");
+};
+
+conpareCowWithPig(190, 120, printLessThan);
