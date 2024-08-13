@@ -39,4 +39,8 @@ mart.customer3 = {
     points: 9500,
 };
 
-console.log(mart);
+// console.log(mart);
+
+for (let i = 0; i < 3; i++) {
+    console.log(mart[`customer${i + 1}`]);
+}
