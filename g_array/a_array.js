@@ -87,16 +87,27 @@
 
 // 2 ~ 10까지 2의 배수로 Array객체에 담기2
 // 2 4 6 8 10: 5칸
-const datas = new Array(5).fill(5);
-datas.forEach((값, 인덱스, 객체) => {
-    객체[인덱스] = (인덱스 + 1) * 2;
-});
+// const datas = new Array(5).fill(5);
+// datas.forEach((값, 인덱스, 객체) => {
+//     객체[인덱스] = (인덱스 + 1) * 2;
+// });
 
-console.log(datas);
+// console.log(datas);
 
 // 1~10까지 담은 후 각 값에 제곱을 출력한다.
+const datas = new Array(10).fill(0);
+
+datas.forEach((data, i, datas) => {
+    datas[i] = i + 1;
+});
+
+datas.forEach((data) => {
+    console.log(data * data);
+});
+
 const square = [];
 for (let i = 1; i <= 10; i++) {
     square.push(i * i);
 }
 console.log(square);
+
