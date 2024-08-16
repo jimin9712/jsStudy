@@ -43,12 +43,12 @@ const postService = (() => {
 
 const replyService = (() => {
     // 작성
-    const write = ({ id, content }) => {
+    const write = ({ userId, content }) => {
         // INSERT(Create)
         // 화면에서 사용자가 입력한 정보를 JAVA 서버로 보내기
     };
     // 목록
-    const getReplies = (reply_page = 1, postId, callback) => {
+    const getReplies = (postId, callback) => {
         // 사용자가 요청한 페이지를 JAVA 서버로 보내기
         // 해당 페이지의 게시글의 댓글 목록을 JSON으로 받아옴.
         const replies = JSON.parse("");
@@ -57,7 +57,7 @@ const replyService = (() => {
         }
     };
     // 수정
-    const modify = ({ replyId, content, userId }) => {
+    const modify = (reply) => {
         // 댓글ID, 댓글 내용 그리고 사용자ID 전달
         // JAVA 서버에 수정된 댓글 내용 정보 전달.
         // JAVA 서버에서 UPDATE 쿼리 발생
@@ -76,3 +76,43 @@ const replyService = (() => {
         remove: remove,
     };
 })();
+
+// 강사님 코드 ============================================================================================
+// 실습
+// 댓글 모듈 만들기(replyService)
+// 댓글 작성(write), 댓글 목록(getReplies), 댓글 수정(modify), 댓글 삭제(remove)
+// const replyService = (() => {
+//     const write = ({ userId, replyContent, postId }) => {};
+
+//     const getReplies = (postId, callback) => {
+//         const replies = JSON.parse("");
+//         if (callback) {
+//             callback(replies);
+//         }
+//     };
+
+//     const modify = (reply) => {};
+
+//     const remove = (id) => {};
+
+//     return {
+//         write: write,
+//         getReplies: getReplies,
+//         modify: modify,
+//         remove: remove,
+//     };
+// })();
+
+// 다음 주 월요일에는 무엇을 배울까?
+// 드디어 통신 배움!
+//
+// new Promise((resolve, reject) => {
+//     let check = false;
+//     if (check) {
+//         resolve("성공!");
+//     } else {
+//         reject("실패!");
+//     }
+// });
+
+// promise.then((result) => {}).catcj((result) => {});
