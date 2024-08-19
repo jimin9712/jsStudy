@@ -1,27 +1,6 @@
 // 모듈화, async, await, callback
 // jsonplaceholder에서 posts 정보를 전체 가져온 뒤
 // userId가 4인 게시글 정보들만 출력하기
-// const postService = (() => {
-//     const getPostsList = async (callback) => {
-//         const response = await fetch(
-//             "https://jsonplaceholder.typicode.com/posts"
-//         );
-//         const posts = await response.json();
-//         callback(posts);
-//     };
-
-//     return { getPostsList: getPostsList };
-// })();
-
-// const printPostsByUserId = (posts, userId) => {
-//     posts.forEach((post) => {
-//         if (post.userId === userId) {
-//             console.log(`Post ID: ${post.id}, Title: ${post.title}`);
-//         }
-//     });
-// };
-
-// postService.getPostsList((posts) => printPostsByUserId(posts, 4));
 
 // async가 함수 앞에 붙여져있으면, 리턴은 무조건 Promise객체로 감싸진다.
 // const postService = (() => {
@@ -48,7 +27,7 @@
 // printMyPosts();
 
 // albums 데이터를 요청한 뒤, userId가 5인 정보 모두 가져오기
-//  그 중 userId와 title 출력하기
+// 그 중 userId와 title만 출력하기
 
 const albumService = (() => {
     const findAlbums = async (userId, callback) => {
@@ -59,7 +38,7 @@ const albumService = (() => {
         return callback(userId, albums);
     };
 
-    return { findAlbums: findAlbums };
+    return { findAlbums, findAlbums };
 })();
 
 const getMyAlbums = (userId, albums) => {
@@ -68,8 +47,8 @@ const getMyAlbums = (userId, albums) => {
 
 const printMyAlbums = async () => {
     const myAlbums = await albumService.findAlbums(5, getMyAlbums);
-    myAlbums.forEach((album) => {
-        console.log(`userId: ${album.userId}, title: ${album.title}`);
+    myAlbums.forEach(({ userId, title }) => {
+        console.log(`${userId}: ${title}`);
     });
 };
 
