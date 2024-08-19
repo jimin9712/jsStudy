@@ -5,27 +5,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>CSS 선택자로 선택 실습</title>
     </head>
-    <style></style>
+    <style>
+        div {
+            border: 3px violet dashed;
+            margin: auto;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
     <body>
-        <h1>CSS 선택자로 선택</h1>
-        <h3><p>🍀갖고 싶은 위시리스트🍀</p></h3>
-        <ul>
-            <li>마우스</li>
-            <li>자동차</li>
-            <li>강남 아파트</li>
-            <li>유니폼</li>
-            <li>분당 아파트</li>
-            <li>여자친구</li>
-        </ul>
+        <div>
+            <h1>CSS 선택자로 선택</h1>
+            <h3><p>🍀갖고 싶은 위시리스트🍀</p></h3>
+            <ul>
+                <li>마우스</li>
+                <li>자동차</li>
+                <li>강남 아파트</li>
+                <li>유니폼</li>
+                <li>분당 아파트</li>
+                <li>여자친구</li>
+            </ul>
+        </div>
     </body>
     <script>
         // queryselector(),queryselectorAll()
         // 내용에 아파트가 들어간 태그의 스타일을
         // fontSize: 30px, color:pink로 변경
-        const wishlist = document.querySelectorAll("li");
+        const wishlist = document.querySelectorAll("ul li");
 
         wishlist.forEach((item) => {
-            if (item.textContent.includes("아파트")) {
+            if (item.innerText.includes("아파트")) {
                 item.style.fontSize = "30px";
                 item.style.color = "pink";
             }
