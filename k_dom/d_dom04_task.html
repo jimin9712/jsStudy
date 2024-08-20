@@ -7,17 +7,17 @@
     </head>
     <body>
         <strong>STRONG 태그입니다.</strong>
-        <div>
+        <div id="strong-wrap">
             <strong>STRONG 태그입니다.</strong>
         </div>
     </body>
     <script>
         // div 안에 있는 strong 태그에만 글자 크기를 기본 크기의 1.5배로 설정한다.
         // div 밖에 있는 strong 태그에만 글자색을 hot pink 로 변경한다.
-        const strongInDiv = document.querySelector("div strong");
-        strongInDiv.style.fontSize = "1.5em";
+        // const strongInDiv = document.querySelector("div strong");
+        // strongInDiv.style.fontSize = "1.5em";
 
-        const strongOutsideDiv = document.querySelector("body > strong");
-        strongOutsideDiv.style.color = "hotpink";
+        // const strongOutsideDiv = document.querySelector("body > strong");
+        // strongOutsideDiv.style.color = "hotpink";
     </script>
 </html>
