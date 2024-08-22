@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(233, 230, 230);
+}
+table {
+    width: 100%;
+}
+th,
+td {
+    border: 1px solid gray;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: rgb(66, 103, 204);
+    border: 1px solid black;
+}
+td.title,
+td.body {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+button{
+    font-size: 30px;
+    font-weight: bold;
+    background-color: navajowhite;
+    width: 450px;
+    height: 50px;
+    border-radius: 15px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: aquamarine;
+}
+#button-wrap{
+   text-align: center;
+}

@@ -18,5 +18,12 @@
             console.log(e.keyCode);
             p.innerHTML = e.target.value;
         });
+
+        // keydown은 누르자마자 실행되기 때문에,
+        // 입력한 문자열이 바로 가져와지지 않는다.
+        // input.addEventListener("keydown", (e) => {
+        //     console.log(e.keyCode);
+        //     p.innerHTML = e.target.value;
+        // });
     </script>
 </html>

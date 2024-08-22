@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(233, 230, 230);
+}
+
+table {
+    width: 100%;
+
+}
+th,
+td {
+    border: 1px solid gray;
+    padding: 8px;
+}
+th {
+    background-color: rgb(66, 108, 204);
+    border: 1px solid black;
+    text-align: center;
+}
+tr{
+    font-size: 20px;
+    font-weight: bold;
+}
+button{
+    border: 2px solid rgb(54, 54, 54);
+    font-size: 30px;
+    font-weight: bold;
+    background-color: darkgrey;
+    width: 450px;
+    height: 50px;
+    border-radius: 15px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: grey;
+}
+#button-wrap{
+    text-align: center;
+ }
+
